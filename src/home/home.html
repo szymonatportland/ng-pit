@@ -1,1 +1,9 @@
 <h1>Angular 1.x ES2015, Webpack Sandpit</h1>
+
+<p>Selected Element {{ homeCtrl.selected }}</p>
+
+<button ng-click="homeCtrl.selected = 1">1</button>
+<button ng-click="homeCtrl.selected = 2">2</button>
+<button ng-click="homeCtrl.selected = 3">3</button>
+
+<ss-details ng-if="homeCtrl.selected == 2" selected="homeCtrl.selected"></ss-details>
