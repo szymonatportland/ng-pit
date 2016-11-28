@@ -8,7 +8,8 @@ var homeDirectiveFactory = () => {
         template,
         controller,
         controllerAs: 'homeCtrl',
-        bindToController: true
+        bindToController: true,
+        transclude: true
     }
 };
 

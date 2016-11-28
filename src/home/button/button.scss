@@ -1,0 +1,87 @@
+$green: lightseagreen;
+
+@mixin outline($color) {
+  background-color: transparent;
+  border: 2px solid $color;
+  color: $color;
+  &:hover, &:focus {
+    background-color: $color;
+    color: #fff;
+  }
+}
+
+@mixin hover($color) {
+  &:focus, &:hover {
+    background-color: darken($color, 10);
+    outline: 0;
+  }
+}
+
+button {
+  $color: grey;
+  border: none;
+  border-radius: 3px;
+  background-color: $color;
+  color: #ffffff;
+  font-size: 14px;
+  height: 35px;
+  min-width: 100px;
+
+  @include hover($color);
+
+  &.outline {
+    @include outline($color);
+  }
+  &.green {
+    $color: lightseagreen;
+    background-color: $color;
+
+    @include hover($color);
+
+    &.outline {
+      @include outline($color);
+    }
+  }
+  &.pink {
+    $color: deeppink;
+    background-color: $color;
+
+    @include hover($color);
+
+    &.outline {
+      @include outline($color);
+    }
+  }
+
+  &.small {
+    font-size: 12px;
+    height: 26px;
+    min-width: 80px;
+    border-width: 1px !important;
+
+  }
+  &.large {
+    font-size: 18px;
+    height: 50px;
+    min-width: 140px;
+    border-width: 3px !important;
+    border-radius: 5px;
+  }
+}
+
+.button-group {
+  @include outline($green);
+  font-size: 12px;
+  height: 26px;
+  min-width: 80px;
+  border-width: 1px !important;
+  margin-right: -1px;
+  border-radius: 0;
+
+  &:first-child {
+    border-radius: 3px 0 0 3px;
+  }
+  &:last-child {
+    border-radius: 0 3px 3px 0;
+  }
+}

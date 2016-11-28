@@ -5,9 +5,11 @@ import homeDirectiveFactory from './home.directive.js';
 import HomeController from './home.controller.js';
 import HomeService from './home.service.js';
 
+import button from './button';
+
 import homeRoutesConfigurator from './home.routes.js'
 
-var dependencies = [uirouter];
+var dependencies = [uirouter, button];
 
 export default angular.module('ss.home', dependencies)
     .config(homeRoutesConfigurator)

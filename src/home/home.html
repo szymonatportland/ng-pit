@@ -1,1 +1,20 @@
 <h1>Angular 1.x ES2015, Webpack Sandpit</h1>
+
+<ss-button
+        label="Click me!"
+        color="green"
+        type="outline"
+        size="small"
+        event="homeCtrl.doSomething()">
+</ss-button>
+<section>
+    <ss-button-group ng-repeat="button in homeCtrl.buttonGroup"
+                     label="{{button.labelTranslationKey}}"
+                     action="button.action">
+    </ss-button-group>
+</section>
+<ul>
+    <li ng-repeat="post in homeCtrl.posts">
+        <span ng-if="homeCtrl.error == true">{{homeCtrl.error}}</span>
+    </li>
+</ul>
