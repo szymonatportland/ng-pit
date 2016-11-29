@@ -1,11 +1,36 @@
-<md-toolbar>
-    <h1>Angular 1.x ES2015, Webpack Sandpit</h1>
-
-</md-toolbar>
-<md-content>
-    <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-        <md-nav-item md-nav-click="goto('page1')" name="page1">Page One</md-nav-item>
-        <md-nav-item md-nav-click="goto('page2')" name="page2">Page Two</md-nav-item>
-        <md-nav-item md-nav-click="goto('page3')" name="page3">Page Three</md-nav-item>
-    </md-nav-bar>
-</md-content>
+<ss-header></ss-header>
+<section layout="column">
+    <section class="container" layout="row">
+        <md-whiteframe class="md-whiteframe-1dp" flex="33" layout="column"
+                       layout-align="start center">
+            <h3 class="md-headline">New Customer Profile</h3>
+            <div layout="column">
+            <md-input-container flex="100">
+                <label>Customer reference</label>
+                <input required name="customerreference" ng-model="project.clientName">
+                <div ng-messages="projectForm.customerreference.$error">
+                    <div ng-message="required">This is required.</div>
+                </div>
+            </md-input-container>
+            </div>
+        </md-whiteframe>
+        <md-whiteframe class="md-whiteframe-1dp" flex="66" layout
+                       layout-align="center center">
+            <span>.md-whiteframe-1dp</span>
+            <md-button class="md-primary md-raised">
+                <md-icon>https</md-icon>
+                Click me
+            </md-button>
+        </md-whiteframe>
+    </section>
+    <section class="container" layout="row">
+        <md-whiteframe flex="100" class="md-whiteframe-1dp" layout
+                       layout-align="center center">
+            <span>.md-whiteframe-1dp</span>
+            <md-button class="md-primary md-raised">
+                <md-icon>https</md-icon>
+                Click me
+            </md-button>
+        </md-whiteframe>
+    </section>
+</section>

@@ -1,0 +1,18 @@
+@import "../colours";
+md-content {
+  background-color: $blue-grey-50;
+}
+
+.container {
+  align-items: stretch;
+  height: calc(50vh - 34px);
+  padding: 20px 10px 0;
+  md-whiteframe {
+    background-color: #ffffff;
+    margin: 0 10px;
+    .md-headline {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
+}

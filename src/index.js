@@ -10,6 +10,7 @@ import ngMessages from 'angular-messages';
 import ngMaterial from 'angular-material';
 
 import home from './home';
+import header from './header';
 import routesConfigurator from './index.routes.js';
 
 var dependencies = [
@@ -19,8 +20,23 @@ var dependencies = [
     ngAnimate,
     ngMessages,
     ngSanitize,
-    ngMaterial
+    ngMaterial,
+    header
 ];
 
 angular.module('ssApp', dependencies)
-    .config(routesConfigurator);
+    .config(routesConfigurator)
+    .config(($mdThemingProvider, $mdIconProvider)=> {
+        var encBlueMap = $mdThemingProvider.extendPalette('light-blue', {
+            'contrastDefaultColor': 'light'
+        });
+        $mdThemingProvider.definePalette('encBlue', encBlueMap);
+
+        $mdThemingProvider.theme('default')
+            .primaryPalette('encBlue')
+            .accentPalette('blue-grey')
+            .warnPalette('red');
+        $mdIconProvider
+            .defaultFontSet('material-icons')
+            .fontSet('md', 'material-icons')
+    });
