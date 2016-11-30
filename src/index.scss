@@ -10,6 +10,7 @@ $blue: #007DC3;
 body {
   font: 100% $font-stack;
   color: $blue-grey-500;
+  background-color: lighten($blue-grey-50, 3);
   div[ui-view] {
     height: 100vh;
   }

@@ -1,0 +1,80 @@
+@import "../common/common";
+
+ss-login {
+  display: flex;
+  height: 100vh;
+
+  .login {
+    background-color: #ffffff;
+    width: 350px;
+    padding: 20px;
+    border: 1px solid $blue-grey-100;
+    border-radius: 5px;
+
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    height: 40px;
+    border: 2px solid $blue-grey-100;
+    border-radius: 3px;
+    padding: 5px;
+    color: $blue-grey-500;
+    margin-bottom: 20px;
+  }
+
+  input[type="checkbox"] {
+    margin-left: 0;
+  }
+
+  label {
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $blue-grey-300;
+    font-weight: 600;
+  }
+
+  .enc-logo {
+    width: 16rem;
+    margin-bottom: 20px;
+  }
+
+  button {
+    width: 100%;
+    background-color: $light-blue400;
+    color: #ffffff;
+    height: 40px;
+    border-radius: 3px;
+    border: none;
+
+    &:hover {
+      background-color: $light-blue800;
+    }
+  }
+
+  .form-row {
+    width: 100%;
+    margin-top: 10px;
+  }
+  a {
+    color: $light-blue700;
+    font-size: 12px;
+    text-decoration: none;
+  }
+
+  .phone {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .copyright {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    color: $blue-grey-300;
+  }
+}

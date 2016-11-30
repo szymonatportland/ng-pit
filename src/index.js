@@ -1,4 +1,5 @@
 import './index.scss';
+import './common/common.scss';
 
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
@@ -11,6 +12,9 @@ import ngMaterial from 'angular-material';
 
 import home from './home';
 import header from './header';
+import portfolio from './portfolio';
+import login from './login';
+import commons from './common/application-commons';
 import routesConfigurator from './index.routes.js';
 
 var dependencies = [
@@ -21,7 +25,10 @@ var dependencies = [
     ngMessages,
     ngSanitize,
     ngMaterial,
-    header
+    header,
+    portfolio,
+    login,
+    commons
 ];
 
 angular.module('ssApp', dependencies)
