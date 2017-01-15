@@ -63,6 +63,11 @@ ss-login {
     color: $light-blue700;
     font-size: 12px;
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: $light-blue900;
+    }
   }
 
   .phone {
