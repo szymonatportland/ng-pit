@@ -51,7 +51,7 @@ module.exports = function makeWebpackConfig(options) {
 
             // Output path from the view of the page
             // Uses webpack-dev-server in development
-            publicPath: BUILD ? '/' : 'http://localhost:8080/',
+            publicPath: BUILD ? '/' : 'http://localhost:3000/',
 
             // Filename for entry points
             // Only adds hash in build mode
@@ -221,6 +221,7 @@ module.exports = function makeWebpackConfig(options) {
      */
     config.devServer = {
         contentBase: './dist',
+        port: 3000,
         stats: {
             modules: false,
             cached: false,

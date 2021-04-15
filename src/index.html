@@ -1,11 +1,28 @@
 <!doctype html>
-<html ng-app="ssApp" lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Angular 1.x ES2015, Webpack Sandpit</title>
     <base href="/">
+    <script src="https://cdn.jsdelivr.net/npm/single-spa@5.9.1/lib/umd/single-spa.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/single-spa-angularjs@4.2.1/lib/single-spa-angularjs.min.js"></script>
+
+    <!-- consider checking/upgrading systemjs version -->
+    <!--<script type="systemjs-importmap">
+  {
+    "imports": {
+      "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.1/lib/system/single-spa.min.js",
+      "@enc/ssNgApp": "/main.js",
+      "@enc/vue-app": "http://localhost:8080/js/app.js"
+    }
+  }
+
+    </script>-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.8.3/system.min.js"></script>
 </head>
 <body>
+
 <div>
     <ui-view></ui-view>
 </div>
