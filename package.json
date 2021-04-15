@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "dev": "webpack serve --history-api-fallback --hot --inline --progress"
+    "dev": "webpack serve --mode=development --history-api-fallback --hot --inline --progress"
   },
   "browser": {
     "fs": false,

@@ -19,7 +19,7 @@ module.exports = {
         libraryTarget: 'system'
 
     },
-    mode: 'development',
+    mode: 'production',
     module: {
         rules: [
             {
